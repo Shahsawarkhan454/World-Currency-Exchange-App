@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currency Exchange Website</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="app">
+
+        <header class="header">
+            <div class="globe">🌍</div>
+            <h1>Currency Exchange Website</h1>
+            <p class="subtitle">
+                Convert currencies 
+            </p>
+        </header>
+
+        <section class="converter">
+            <label for="amount">Amount</label>
+            <input
+                type="number"
+                id="amount"
+                value="1"
+                min="0"
+                step="any"
+                placeholder="Enter amount"
+            >
+
+            <label for="fromCurrency">From Currency</label>
+            <select id="fromCurrency">
+                <option value="USD">🇺🇸 USD - US Dollar</option>
+                <option value="PKR">🇵🇰 PKR - Pakistani Rupee</option>
+            </select>
+
+            <div class="swap-row">
+                <button
+                    type="button"
+                    class="swap-button"
+                    id="swapButton"
+                    aria-label="Swap currencies"
+                >
+                    ⇅ Swap Currencies
+                </button>
+            </div>
+
+            <label for="toCurrency">To Currency</label>
+            <select id="toCurrency">
+                <option value="PKR">🇵🇰 PKR - Pakistani Rupee</option>
+                <option value="USD">🇺🇸 USD - US Dollar</option>
+            </select>
+
+            <button
+                type="button"
+                class="convert-button"
+                id="convertButton"
+            >
+                Convert Currency
+            </button>
+        </section>
+
+        <section class="result" aria-live="polite">
+            <p class="result-label">Converted Amount</p>
+            <div id="result">Loading rates...</div>
+            <p id="rateInfo"></p>
+        </section>
+
+        <p id="status" role="status">
+            Loading currencies and exchange rates...
+        </p>
+
+        <footer>
+            <p>Exchange rates are indicative and may change.</p>
+        </footer>
+
+    </main>
+</body>
+</html>
